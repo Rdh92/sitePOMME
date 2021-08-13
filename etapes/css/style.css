@@ -21,10 +21,10 @@
 
         h1#header{
             height: 258px;
-            background: url(../img/apple.jpg) no-repeat left top;
+            background: url("../img/apple.jpg") no-repeat left top;
             margin: 0 auto;
+            text-indent: -5000px;
         }
-
         /* la propriété display et la valeur block transforment le lien a inline en élément de type block on peut donc lui attribuer des propriétés de taille ; on positionne l'image de fond qui a les mêmes dimensions que le cadre ainsi créé */
 
         #header a{
@@ -36,22 +36,73 @@
             height: 70px;
             top: 15px;
             left: 350px;
-            background: url(../img/title.gif) no-repeat left top;
-            text-indent: -5000px;
+            background: url("../img/title.gif") no-repeat right top;
         } 
 
-        nav{
-            background-color: #8ed234;
-            color: white;
-            height: 40px;
-            padding: 10px;
+        /* la navigation : la ul */
+
+        nav ul{
+            height: 35px;
+            margin: 0;
+            padding: 0;
+            /* repeat x : répétition horizontale sur l'axe de abscisses  */
+            background: url("../img/bg_menu.gif") repeat-x 0 -25px;
+            list-style: none;
         }
 
-
-        li#display{
-            display: inline;
+        nav ul li{
+            float: left;
+            text-align: center;
         }
 
+        nav ul li a{
+            display: block;
+            width: 130px;
+            line-height: 20px;
+            border-right: 2px solid #ccff99;
+
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover{
+            background: url("../img/bg_menu.gif") repeat-x 0 0;
+        }
+
+        /* le contenu principal dans la section  */
+
+        #principal{
+            padding: 0 30px 0 100px;
+
+            background-image: url("../img/bg_page.gif");
+            background-repeat: no-repeat;
+            background-position: 15px 15px;
+        }
+
+        #principal h2{
+            padding-left: 25px;
+            background:url("../img/little_apple.gif") no-repeat left center;
+        }
+
+        #principal h3{
+            margin-left: 15px;
+            padding-left: 5px;
+            border-bottom: 1px solid #9b2;
+            border-left: 1px solid #9b2;
+        }
+
+        blockquote{
+            padding-left: 10px;
+            border-left: 5px solid #9b2;
+        }
+
+        #principal p{
+            line-height: 1.7em;
+            text-align: justify;
+            text-indent: 2em;
+        }
        
 
         footer{
@@ -60,3 +111,13 @@
             background-color: #aabb44;
             color: white;
         }
+
+        footer p{
+            margin: 0;
+            padding: 10px;
+
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+        }
+ 
